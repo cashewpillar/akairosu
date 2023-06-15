@@ -1,4 +1,10 @@
 import Image from 'next/image'
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Artist Name | Home',
+  description: 'Artist Name is a digital artist who likes drawing cute animals.',
+}
 
 export default function Home() {
   return (
