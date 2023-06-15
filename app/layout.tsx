@@ -65,7 +65,7 @@ export default function RootLayout({
                 </span>
               </h2>
               <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-                View the artist's recent works.
+                View the artist&apos;s recent works.
               </p>
             </Link>
 
@@ -81,7 +81,7 @@ export default function RootLayout({
                 </span>
               </h2>
               <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-                Navigate to the artist's various platforms.
+                Navigate to the artist&apos;s various platforms.
               </p>
             </Link>
           </div>
