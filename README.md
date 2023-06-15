@@ -40,3 +40,9 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 1. Edit code
 2. Find code issues using `npm run lint`
 3. Stage changes, create commit, and push to remote repository
+
+## Use as Template
+
+1. Select `Use this template` 
+2. Set GitHub token 
+3. Once there is an update, a pull request will be made
