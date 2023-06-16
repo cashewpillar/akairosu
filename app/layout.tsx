@@ -1,6 +1,7 @@
 import './globals.css'
 import { Inter } from 'next/font/google'
 import Link from 'next/link'
+import { Providers } from './providers'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -15,77 +16,79 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body className={inter.className}>
-        <main className="flex min-h-screen flex-col items-center justify-between p-24">
-          {children}
+        <Providers>
+          <main className="flex min-h-screen flex-col items-center justify-between p-24">
+            {children}
 
-          <div className="mb-32 grid text-center lg:mb-0 lg:grid-cols-4 lg:text-left">
-            <Link
-              href="/commission"
-              className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-              rel="noopener noreferrer"
-            >
-              <h2 className={`mb-3 text-2xl font-semibold`}>
-                Commission{' '}
-                <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-                  -&gt;
-                </span>
-              </h2>
-              <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-                Check commission prices, status and availability.
-              </p>
-            </Link>
+            <div className="mb-32 grid text-center lg:mb-0 lg:grid-cols-4 lg:text-left">
+              <Link
+                href="/commission"
+                className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
+                rel="noopener noreferrer"
+              >
+                <h2 className={`mb-3 text-2xl font-semibold`}>
+                  Commission{' '}
+                  <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
+                    -&gt;
+                  </span>
+                </h2>
+                <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
+                  Check commission prices, status and availability.
+                </p>
+              </Link>
 
-            <Link
-              href="/faq"
-              className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800 hover:dark:bg-opacity-30"
-              rel="noopener noreferrer"
-            >
-              <h2 className={`mb-3 text-2xl font-semibold`}>
-                FAQ{' '}
-                <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-                  -&gt;
-                </span>
-              </h2>
-              <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-                Learn more about the artist!
-              </p>
-            </Link>
+              <Link
+                href="/faq"
+                className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800 hover:dark:bg-opacity-30"
+                rel="noopener noreferrer"
+              >
+                <h2 className={`mb-3 text-2xl font-semibold`}>
+                  FAQ{' '}
+                  <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
+                    -&gt;
+                  </span>
+                </h2>
+                <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
+                  Learn more about the artist!
+                </p>
+              </Link>
 
-            <Link
-              href="portfolio"
-              className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-              rel="noopener noreferrer"
-            >
-              <h2 className={`mb-3 text-2xl font-semibold`}>
-                Portfolio{' '}
-                <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-                  -&gt;
-                </span>
-              </h2>
-              <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-                View the artist&apos;s recent works.
-              </p>
-            </Link>
+              <Link
+                href="portfolio"
+                className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
+                rel="noopener noreferrer"
+              >
+                <h2 className={`mb-3 text-2xl font-semibold`}>
+                  Portfolio{' '}
+                  <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
+                    -&gt;
+                  </span>
+                </h2>
+                <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
+                  View the artist&apos;s recent works.
+                </p>
+              </Link>
 
-            <Link
-              href="/socials"
-              className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-              rel="noopener noreferrer"
-            >
-              <h2 className={`mb-3 text-2xl font-semibold`}>
-                Socials{' '}
-                <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-                  -&gt;
-                </span>
-              </h2>
-              <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-                Navigate to the artist&apos;s various platforms.
-              </p>
-            </Link>
-          </div>
-        </main>
+              <Link
+                href="/socials"
+                className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
+                rel="noopener noreferrer"
+              >
+                <h2 className={`mb-3 text-2xl font-semibold`}>
+                  Socials{' '}
+                  <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
+                    -&gt;
+                  </span>
+                </h2>
+                <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
+                  Navigate to the artist&apos;s various platforms.
+                </p>
+              </Link>
+            </div>
+          </main>
+        </Providers>
       </body>
     </html>
   )
