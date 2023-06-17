@@ -24,7 +24,7 @@ export default function RootLayout({
             <GlobalNav />
             <div className="lg:pl-80 w-full h-full flex">
               <div className="mx-auto px-2 pt-20 lg:p-8 flex">
-                <ThemeChanger className="fixed top-3 left-3 lg:top-6 lg:right-6 z-10" />
+                <ThemeChanger className="fixed lg:top-6 lg:right-6 z-10" />
                 {children}
               </div>
             </div>
