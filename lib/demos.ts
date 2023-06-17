@@ -3,80 +3,47 @@ export type Item = {
     slug: string;
     link: string;
   };
-  
-  export const demos: { name: string; items: Item[] }[] = [
-    {
-      name: 'Layouts',
-      items: [
-        {
-          name: 'Nested Layouts',
-          slug: 'layouts',
-          link: 'Create UI that is shared across routes',
-        },
-        {
-          name: 'Grouped Layouts',
-          slug: 'route-groups',
-          link: 'Organize routes without affecting URL paths',
-        },
-      ],
-    },
-    {
-      name: 'File Conventions',
-      items: [
-        {
-          name: 'Loading',
-          slug: 'loading',
-          link:
-            'Create meaningful Loading UI for specific parts of an app',
-        },
-        {
-          name: 'Error',
-          slug: 'error-handling',
-          link: 'Create Error UI for specific parts of an app',
-        },
-      ],
-    },
-    {
-      name: 'Data Fetching',
-      items: [
-        {
-          name: 'Streaming with Suspense',
-          slug: 'streaming',
-          link:
-            'Streaming data fetching from the server with React Suspense',
-        },
-        {
-          name: 'Static Data',
-          slug: 'ssg',
-          link: 'Generate static pages',
-        },
-      ],
-    },
-    {
-      name: 'Components',
-      items: [
-        {
-          name: 'Client Context',
-          slug: 'context',
-          link:
-            'Pass context between Client Components that cross Server/Client Component boundary',
-        },
-      ],
-    },
-    {
-      name: 'Misc',
-      items: [
-        {
-          name: 'Client Component Hooks',
-          slug: 'hooks',
-          link: 'Preview the routing hooks available in Client Components',
-        },
-        {
-          name: 'CSS and CSS-in-JS',
-          slug: 'styling',
-          link: 'Preview the supported styling solutions',
-        },
-      ],
-    },
-  ];
-  
+
+export const demos: Item[] = [
+  {
+    name: "About",
+    slug: "about",
+    link: "/about",
+  },
+  {
+    name: "Project 1",
+    slug: "project-1",
+    link: "/project-1",
+  },
+  {
+    name: "Project 2",
+    slug: "project-2",
+    link: "/project-2",
+  },
+  {
+    name: "Project 3",
+    slug: "project-3",
+    link: "/project-3",
+  },
+  {
+    name: "Illustrations",
+    slug: "illustrations",
+    link: "/illustrations",
+  },
+  {
+    name: "Animations",
+    slug: "animations",
+    link: "/animations",
+  },
+  {
+    name: "Social Links",
+    slug: "social-links",
+    link: "/social-links",
+  },
+  {
+    name: "ETC.",
+    slug: "etc",
+    link: "/etc",
+  }
+]
+

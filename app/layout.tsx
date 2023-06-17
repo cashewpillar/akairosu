@@ -19,10 +19,10 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body className={inter.className}>
         <Providers>
-          <main className="bg-akairosu-white dark:bg-zinc-900 dark:text-akairosu-white flex min-h-screen">
+          <main className="bg-white dark:bg-zinc-900 dark:text-akairosu-white flex h-screen">
             <GlobalNav />
-            <div className="lg:pl-72">
-              <div className="mx-auto max-w-4xl space-y-8 px-2 pt-20 lg:py-8 lg:px-8">
+            <div className="lg:pl-80 w-full h-full flex">
+              <div className="mx-auto px-2 pt-20 lg:p-8 flex">
                 {children}
               </div>
             </div>
