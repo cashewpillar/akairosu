@@ -33,7 +33,7 @@ export function GlobalNav() {
             <Image src="/akairosu.svg" alt="Akairosu" width={308} height={80} />
           </div>
         </Link>
-        <div className="border-b-4 border-zinc-400/30 w-68 h-11   bg-zinc-200 rounded-full py-1 px-5">
+        <div className="border-b-4 border-zinc-400/30 dark:border-akairosu-brown w-68 h-11  bg-zinc-200 dark:bg-akairosu-white rounded-full py-1 px-5">
           <ul className="flex flex-row space-x-3">
             {svgs.map(svg => (
               <li key={svg.key}>
@@ -70,18 +70,32 @@ export function GlobalNav() {
 
       <div
         className={clsx('lg:static lg:block', {
-          'fixed inset-x-0 bottom-0 top-14 mt-px bg-akairosu-white': isOpen,
+          'fixed inset-x-0 bottom-0 top-14 mt-px bg-akairosu-white dark:bg-zinc-900': isOpen,
           hidden: !isOpen,
         })}
       >
-        <nav className="px-5 pt-10">
+        <nav className={clsx(
+          'px-5 pt-10',
+        {
+          '': isOpen,
+          '': !isOpen
+        })}>
           <div>
             {demos.map((item) => (
               <GlobalNavItem key={item.slug} item={item} close={close} />
             ))}
           </div>
+          <Link className="absolute bottom-4 hover:text-akairosu-orange" href="mailto:akairosu.arts@gmail.com">
+            <div className="flex gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
+              </svg>
+              <p>akairosu.arts@gmail.com</p>
+            </div>
+          </Link>
         </nav>
       </div>
+
     </nav>
   )
 }
@@ -95,16 +109,16 @@ function GlobalNavItem({
 }) {
   const segment = useSelectedLayoutSegment();
   const isActive = item.slug === segment;
-
+ 
   return (
     <Link
       onClick={close}
       href={`/${item.slug}`}
       className={clsx(
-        'block rounded-md px-3 py-1 text-sm font-medium hover:text-gray-300',
+        'block rounded-md px-3 py-1 text-sm font-medium hover:text-akairosu-brown',
         {
-          'text-zinc-900 hover:text-akairosu-brown hover:font-semibold': !isActive,
-          'text-white': isActive,
+          '': !isActive,
+          'underline': isActive,
         },
       )}
     >

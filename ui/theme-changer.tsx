@@ -2,13 +2,13 @@
 
 import { useTheme } from 'next-themes'
 
-export const ThemeChanger = () => {
+export const ThemeChanger = (props: any) => {
     const { theme, setTheme } = useTheme()
     const toggleTheme = () => setTheme(theme === 'dark' ? 'light' : 'dark')
     
     return (
       <button
-          className="rounded-full hover:bg-neutral-800/10 transition-colors p-3 dark:hover:bg-neutral-200/10"
+          className={`rounded-full hover:bg-neutral-800/10 transition-colors p-3 dark:hover:bg-neutral-200/10 ${props.className}`}
           onClick={toggleTheme}
       >
           {theme === 'light' ? (

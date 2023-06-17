@@ -2,6 +2,7 @@ import './globals.css'
 import { Inter } from 'next/font/google'
 import { Providers } from './providers'
 import { GlobalNav } from '@/ui/global-nav'
+import { ThemeChanger } from '@/ui/theme-changer'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -19,10 +20,11 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body className={inter.className}>
         <Providers>
-          <main className="bg-white dark:bg-zinc-900 dark:text-akairosu-white flex h-screen">
+          <main className="h-screen bg-white dark:bg-zinc-900 dark:text-akairosu-white flex">
             <GlobalNav />
             <div className="lg:pl-80 w-full h-full flex">
               <div className="mx-auto px-2 pt-20 lg:p-8 flex">
+                <ThemeChanger className="fixed top-3 left-3 lg:top-6 lg:right-6 z-10" />
                 {children}
               </div>
             </div>
