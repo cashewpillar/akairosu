@@ -1,7 +1,8 @@
 import './globals.css'
 import { Inter } from 'next/font/google'
 import Link from 'next/link'
-import { Providers, ThemeChanger } from './providers'
+import { Providers } from './providers'
+import { ThemeChanger } from '../ui/theme-changer'
 
 const inter = Inter({ subsets: ['latin'] })
 
