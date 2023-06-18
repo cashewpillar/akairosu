@@ -24,8 +24,8 @@ export default function RootLayout({
             <GlobalNav />
             <div className="flex flex-col">
               <div className="invisible lg:visible w-screen h-10 border-b-4 bg-zinc-200 dark:bg-akairosu-white border-zinc-300 dark:border-akairosu-orange"></div>
-              <div className="lg:pl-80 w-full h-full flex">
-                <div className="mx-auto px-2 pt-20 lg:p-8 flex">
+              <div className="lg:pl-80 h-full flex">
+                <div className="mx-auto px-2 pt-20 lg:p-0 flex">
                   {/* had to add lg:left-auto to make it work both sides */}
                   <ThemeChanger className="fixed lg:top-14 lg:right-6 lg:left-auto left-3 top-3 z-10" />
                   {children}
