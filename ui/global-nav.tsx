@@ -30,7 +30,7 @@ export function GlobalNav() {
           <ul className="flex flex-row space-x-3">
             {socials.map(social => (
               <li key={social.slug}>
-                <SocialMediaButton svg={social.svg} link={social.link} />
+                <SocialMediaButton svgPath={social.svgPath} link={social.link} />
               </li>
             ))}
           </ul>
@@ -121,12 +121,14 @@ function GlobalNavItem({
 }
 
 function SocialMediaButton(
-  { svg, link }: { svg: React.ReactNode, link: string },
+  { svgPath, link }: { svgPath: React.ReactNode, link: string },
 ) {
   return (
     <a href={link} target='_blank'>
       <button className="rounded-full p-2 transition-colors duration-75 bg-akairosu-brown hover:bg-zinc-800 fill-current text-white">
-        { svg }
+        <svg className="h-4 w-4" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          { svgPath } 
+        </svg>
       </button>
     </a>
   )
