@@ -23,7 +23,7 @@ export function GlobalNav() {
 
   return (
     <nav className="fixed top-0 z-10 flex w-full flex-col pl-4 lg:bottom-0 lg:z-auto lg:w-80">
-      <div className="flex flex-col h-14 items-center pt-20 pb-12 mx-4 lg:h-auto">
+      <div className="flex flex-col h-14 items-center py-12 lg:pt-20 mx-4 lg:h-auto">
         <Link
           href="/"
           className="pb-3"
