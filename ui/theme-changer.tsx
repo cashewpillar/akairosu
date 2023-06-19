@@ -13,7 +13,7 @@ export const ThemeChanger = (props: any) => {
     
     return (
       <button
-          className={`animate-bounce text-akairosu-blue bg-transparent border-akairosu-blue border-[1px] hover:border-akairosu-blue rounded-full hover:bg-akairosu-blue hover:text-akairosu-white transition-colors p-3 ${props.className}`}
+          className={`lg:animate-bounce text-akairosu-blue bg-transparent border-akairosu-blue border-[1px] hover:border-akairosu-blue rounded-full hover:bg-akairosu-blue hover:text-akairosu-white transition-colors p-3 ${props.className}`}
           onClick={toggleTheme}
       >
           {theme === 'light' ? (

@@ -70,7 +70,7 @@ export function GlobalNav() {
 
       <div
         className={clsx('lg:static lg:block', {
-          'fixed inset-x-0 bottom-0 top-14 mt-px bg-akairosu-white dark:bg-zinc-900': isOpen,
+          'fixed inset-x-0 bottom-0 top-14 mt-px bg-white dark:bg-zinc-900': isOpen,
           hidden: !isOpen,
         })}
       >

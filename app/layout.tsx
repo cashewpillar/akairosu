@@ -25,7 +25,7 @@ export default function RootLayout({
             <div className="flex flex-col">
               <div className="invisible lg:visible w-screen h-10 border-b-4 bg-zinc-200 dark:bg-akairosu-white border-zinc-300 dark:border-akairosu-brown"></div>
               <div className="lg:pl-80 w-full h-full">
-                <div className="px-3 pt-48 lg:p-0 w-full h-full">
+                <div className="p-5 pt-48 lg:p-0 w-full h-full">
                   {/* had to add lg:left-auto to make it work both sides */}
                   <ThemeChanger className="fixed lg:bottom-14 lg:top-auto lg:right-10 lg:left-auto left-3 top-3 z-10" />
                   {children}
