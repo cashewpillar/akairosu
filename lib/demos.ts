@@ -7,8 +7,8 @@ export type Item = {
 export const demos: Item[] = [
   {
     name: "About",
-    slug: "about",
-    link: "/about",
+    slug: "",
+    link: "",
   },
   {
     name: "Project 1",

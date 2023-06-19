@@ -101,21 +101,33 @@ function GlobalNavItem({
   close: () => false | void;
 }) {
   const segment = useSelectedLayoutSegment();
-  const isActive = item.slug === segment;
+  const isActive = item.slug === segment || (item.slug === '' && segment === null); // set about page as default 
+  const [hover, setHover] = useState(false);
+  const onHover = () => {
+    setHover(true);
+  };
+  
+  const onLeave = () => {
+    setHover(false);
+  };
  
   return (
     <Link
+      onMouseEnter={onHover}
+      onMouseLeave={onLeave}
       onClick={close}
       href={`/${item.slug}`}
       className={clsx(
-        'block rounded-md px-3 py-1 text-sm font-medium hover:text-akairosu-brown',
+        'block rounded-md px-3 py-1 text-sm font-medium hover:text-akairosu-brown transition-all duration-300',
         {
           '': !isActive,
-          'underline': isActive,
+          'text-akairosu-brown font-semibold': isActive,
         },
       )}
     >
-      {item.name.toUpperCase()}
+      {item.name.toUpperCase()} &nbsp;
+      {hover && !isActive ? <span className="animate-pulse">🌻</span> : ''}
+      {/* {isActive ? '🐐':''} */}
     </Link>
   );
 }
@@ -125,7 +137,7 @@ function SocialMediaButton(
 ) {
   return (
     <a href={link} target='_blank'>
-      <button className="rounded-full p-2 transition-colors duration-75 bg-akairosu-brown hover:bg-zinc-800 fill-current text-white">
+      <button className="rounded-full p-2 transition-colors duration-300 bg-akairosu-brown hover:bg-zinc-800 fill-current text-white">
         <svg className="h-4 w-4" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
           { svgPath } 
         </svg>
