@@ -20,12 +20,12 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body className={inter.className}>
         <Providers>
-          <main className="h-screen bg-white dark:bg-zinc-900 dark:text-akairosu-white flex">
+          <div className="h-screen bg-white dark:bg-zinc-900 dark:text-akairosu-white flex">
             <GlobalNav />
             <div className="flex flex-col">
               <div className="invisible lg:visible w-screen h-10 dark:h-8 border-b-4 bg-zinc-200 dark:bg-akairosu-white border-zinc-300 dark:border-akairosu-orange"></div>
-              <div className="lg:pl-80 w-full h-full flex">
-                <div className="mx-auto px-2 pt-20 lg:p-0 flex">
+              <div className="lg:pl-80 w-full h-full">
+                <div className="px-2 pt-20 lg:p-0 w-full h-full">
                   {/* had to add lg:left-auto to make it work both sides */}
                   <ThemeChanger className="fixed lg:top-14 lg:right-6 lg:left-auto left-3 top-3 z-10" />
                   {children}
@@ -33,7 +33,7 @@ export default function RootLayout({
               </div>
               <div className="bottom-0 invisible lg:visible w-screen h-10 dark:h-8 bg-zinc-200 dark:bg-akairosu-white border-t-4 border-zinc-300 dark:border-akairosu-orange"></div>
             </div>
-          </main>
+          </div>
         </Providers>
       </body>
     </html>

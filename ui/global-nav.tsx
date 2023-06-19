@@ -22,7 +22,7 @@ export function GlobalNav() {
   const close = () => setIsOpen(false);
 
   return (
-    <nav className="fixed top-0 z-10 flex w-full flex-col pl-4 lg:bottom-0 lg:z-auto lg:w-80 lg:border-b-0">
+    <nav className="fixed top-0 z-10 flex w-full flex-col pl-4 lg:bottom-0 lg:z-auto lg:w-80">
       <div className="flex flex-col h-14 items-center pt-20 pb-12 mx-4 lg:h-auto">
         <Link
           href="/"
@@ -85,7 +85,7 @@ export function GlobalNav() {
               <GlobalNavItem key={item.slug} item={item} close={close} />
             ))}
           </div>
-          <Link className="absolute bottom-14 hover:text-akairosu-orange" href="mailto:akairosu.arts@gmail.com">
+          <Link className="absolute bottom-14 dark:bottom-10 hover:text-akairosu-orange" href="mailto:akairosu.arts@gmail.com">
             <div className="flex gap-2">
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
