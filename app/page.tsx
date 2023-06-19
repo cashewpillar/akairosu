@@ -2,8 +2,8 @@ import { Metadata } from 'next'
 import { ArtPreview } from '@/ui/art-preview'
 
 export const metadata: Metadata = {
-  title: 'akairosu_ | Home',
-  description: 'desc',
+  title: 'akairosu_',
+  description: '🐐 garden goat phvtuber · art · live2d',
 }
 
 export default function Home() {
