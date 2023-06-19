@@ -1,5 +1,5 @@
-import Image from 'next/image'
 import { Metadata } from 'next'
+import { ArtPreview } from '@/ui/art-preview'
 
 export const metadata: Metadata = {
   title: 'akairosu_ | Home',
@@ -7,14 +7,12 @@ export const metadata: Metadata = {
 }
 
 export default function Home() {
+  
   return (
-    <div className="relative flex place-items-center">
-      <Image
-        src="/rabbit.png"
-        alt="Rabbit"
-        width={214}
-        height={300}
-      />
-    </div>
+    <main className="relative h-full">
+      <div>
+        <ArtPreview />
+      </div>
+    </main>
   )
 }
