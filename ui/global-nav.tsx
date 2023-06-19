@@ -1,7 +1,7 @@
 'use client';
 
 import { demos, type Item } from '@/lib/demos'
-import { socials, type Social } from '@/lib/socials'
+import { socials } from '@/lib/socials'
 import { useSelectedLayoutSegment } from 'next/navigation'
 import React, { useState } from 'react'
 import Image from 'next/image'
