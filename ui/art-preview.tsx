@@ -22,27 +22,21 @@ export const ArtPreview = () => {
             <Image
                 src="/diamonds.png"
                 alt="Diamond Overlay"
-                className="absolute z-[3]"
-                style={{objectFit: "contain", 
-                        objectPosition: "right bottom",
-                        filter: theme === 'dark' ? filters.brown : filters.gray}}
+                className="invisible lg:visible absolute object-contain object-right-bottom z-[3]"
+                style={{filter: theme === 'dark' ? filters.brown : filters.gray}}
                 fill
             />
             <Image
                 src="/overlay.png"
                 alt="Overlay"
-                className="absolute z-[2]"
-                style={{objectFit: "contain", 
-                        objectPosition: "left bottom",
-                        filter: theme === 'dark' ? filters.dark : filters.light}}
+                className="invisible lg:visible absolute object-contain object-left z-[2]"
+                style={{filter: theme === 'dark' ? filters.dark : filters.light}}
                 fill
             />
             <Image
                 src="/mercy-art.jpg"
                 alt="Overwatch Mercy Art"
-                className="z-[1]"
-                style={{objectFit: "contain", 
-                        objectPosition: "right bottom"}}
+                className=" z-[1] object-cover object-left lg:object-contain lg:object-right"
                 fill
             />
         </>
