@@ -1,5 +1,5 @@
 import { Metadata } from 'next'
-import { DiamondOverlay } from '@/ui/diamond-overlay'
+import { ArtPreview } from '@/ui/art-preview'
 
 export const metadata: Metadata = {
   title: 'akairosu_ | Home',
@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <main className="relative h-full">
       <div>
-        <DiamondOverlay />
+        <ArtPreview />
       </div>
     </main>
   )

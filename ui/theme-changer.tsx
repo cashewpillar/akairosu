@@ -13,7 +13,7 @@ export const ThemeChanger = (props: any) => {
     
     return (
       <button
-          className={`rounded-full hover:bg-neutral-800/10 transition-colors p-3 dark:hover:bg-neutral-200/10 ${props.className}`}
+          className={`text-zinc-900 rounded-full hover:bg-neutral-800/10 transition-colors p-3 ${props.className}`}
           onClick={toggleTheme}
       >
           {theme === 'light' ? (
