@@ -22,14 +22,14 @@ export const ArtPreview = () => {
             <Image
                 src="/diamonds.png"
                 alt="Diamond Overlay"
-                className="transition-colors duration-300 invisible xl:visible object-contain object-right-bottom z-[3]"
+                className="pointer-events-none transition-colors duration-300 invisible xl:visible object-contain object-right-bottom z-[3]"
                 style={{filter: (theme === 'light' ? filters.gray : filters.orange)}}
                 fill
             />
             <Image
                 src="/screentones.png"
                 alt="Overlay"
-                className="transition-colors duration-300 invisible lg:visible object-cover object-left xl:object-[-100px] lg:object-[-300px] z-[2]"
+                className="pointer-events-none transition-colors duration-300 invisible lg:visible object-cover object-left xl:object-[-100px] lg:object-[-300px] z-[2]"
                 style={{filter: (theme === 'light' ? filters.light : filters.dark)}}
                 fill
             />

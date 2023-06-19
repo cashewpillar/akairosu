@@ -3,6 +3,7 @@ import { Inter } from 'next/font/google'
 import { Providers } from './providers'
 import { GlobalNav } from '@/ui/global-nav'
 import { ThemeChanger } from '@/ui/theme-changer'
+import { RouterEvents } from './router-events'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -21,6 +22,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <Providers>
           <div className="h-screen bg-white dark:bg-zinc-900 dark:text-akairosu-white flex">
+            <RouterEvents />
             <GlobalNav />
             <div className="flex flex-col">
               <div className="transition-colors duration-300 invisible lg:visible w-screen h-10 border-b-4 bg-zinc-200 dark:bg-akairosu-white border-zinc-300 dark:border-akairosu-brown"></div>

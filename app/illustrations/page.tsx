@@ -8,14 +8,10 @@ export const metadata: Metadata = {
 
 export default function Home() {
   return (
-    <main className="relative h-full">
+    <main className="relative h-full grid place-content-center">
       <div>
-        <Image
-          src="/rabbit.png"
-          alt="Rabbit"
-          width={214}
-          height={300}
-        />
+        <span className="text-2xl pr-4 mr-4 border-e-[1px] border-zinc-400">🐐</span>
+        <span>Illustrations</span>
       </div>
     </main>
   )
