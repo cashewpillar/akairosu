@@ -78,13 +78,13 @@ export function GlobalNav() {
               <GlobalNavItem key={item.slug} item={item} close={close} />
             ))}
           </div>
-          <Link className="absolute bottom-14 hover:text-akairosu-orange" href="mailto:akairosu.arts@gmail.com">
-            <div className="flex gap-2">
+          <Link className="group flex gap-2 absolute bottom-14 hover:text-akairosu-orange" href="mailto:akairosu.arts@gmail.com">
+            <button className="group-hover:animate-wiggle">
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
               </svg>
-              <p>akairosu.arts@gmail.com</p>
-            </div>
+            </button>
+            <p>akairosu.arts@gmail.com</p>
           </Link>
         </nav>
       </div>
@@ -137,7 +137,7 @@ function SocialMediaButton(
 ) {
   return (
     <a href={link} target='_blank'>
-      <button className="rounded-full p-2 transition-colors duration-300 bg-akairosu-brown hover:bg-zinc-800 fill-current text-white">
+      <button className="hover:animate-wiggle rounded-full p-2 transition-colors duration-300 bg-akairosu-brown hover:bg-zinc-800 fill-current text-white">
         <svg className="h-4 w-4" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
           { svgPath } 
         </svg>

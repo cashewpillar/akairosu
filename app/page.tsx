@@ -9,10 +9,13 @@ export const metadata: Metadata = {
 export default function Home() {
   
   return (
-    <main className="relative h-full">
-      <div>
-        <ArtPreview />
-      </div>
+    <main className="overflow-hidden relative h-full">
+      <ArtPreview src="/mercy-art.jpg" alt="Overwatch Mercy Art" />
+      {/* 
+        div element is for overlaying object-fitted art preview above 
+        so that it is unclickable where the screentones are present
+      */}
+      <div className="absolute top-0 left-[-12%] bg-none xl:w-8/12 lg:w-9/12 h-full skew-x-[167deg]"></div>
     </main>
   )
 }
