@@ -2,7 +2,7 @@
 
 import { demos, type Item } from '@/lib/demos'
 import { socials } from '@/lib/socials'
-import { useSelectedLayoutSegment } from 'next/navigation'
+import { useSelectedLayoutSegments } from 'next/navigation'
 import React, { useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -100,8 +100,8 @@ function GlobalNavItem({
   item: Item;
   close: () => false | void;
 }) {
-  const segment = useSelectedLayoutSegment();
-  const isActive = item.slug === segment || (item.slug === '' && segment === null); // set about page as default 
+  const segments = useSelectedLayoutSegments()
+  const isActive = item.slug === segments.at(-1) || (item.slug === '' && segments.length == 0); // set about page as default 
   const [hover, setHover] = useState(false);
   const onHover = () => {
     setHover(true);
