@@ -1,13 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import "nprogress/nprogress.css";
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-rgb: 235, 233, 228;
+#nprogress .spinner {
+  display: none;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background-color: rgb(var(--background-rgb));
+#nprogress .bar {
+  background-color: theme('colors.akairosu.blue');
+  height: 3px;
 }

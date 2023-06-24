@@ -5,7 +5,7 @@ import { socials } from '@/lib/socials'
 import { useSelectedLayoutSegments } from 'next/navigation'
 import React, { useState } from 'react'
 import Image from 'next/image'
-import Link from 'next/link'
+import Link from '@/app/link'
 import clsx from 'clsx'
 
 export function GlobalNav() {
