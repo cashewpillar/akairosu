@@ -1,6 +1,6 @@
 import './globals.css'
 import { Inter } from 'next/font/google'
-import { Providers } from './providers'
+import { Providers } from '../utils/providers'
 import { GlobalNav } from '@/ui/global-nav'
 import { ThemeChanger } from '@/ui/theme-changer'
 
