@@ -1,4 +1,4 @@
-import { Metadata, NextPage } from 'next'
+import type { Metadata, NextPage } from 'next'
 
 export const metadata: Metadata = {
   title: 'Social Links',
