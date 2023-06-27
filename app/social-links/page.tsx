@@ -1,12 +1,11 @@
-import Image from 'next/image'
-import { Metadata } from 'next'
+import { Metadata, NextPage } from 'next'
 
 export const metadata: Metadata = {
   title: 'Social Links',
   description: '',
 }
 
-export default function Home() {
+const Home: NextPage = () => {
   return (
     <main className="relative h-full grid place-content-center">
       <div>
@@ -16,3 +15,5 @@ export default function Home() {
     </main>
   )
 }
+
+export default Home

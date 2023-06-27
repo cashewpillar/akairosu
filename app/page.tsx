@@ -1,4 +1,4 @@
-import { Metadata } from 'next'
+import { Metadata, NextPage } from 'next'
 import { ArtPreview } from '@/ui/art-preview'
 
 export const metadata: Metadata = {
@@ -6,8 +6,8 @@ export const metadata: Metadata = {
   description: '🐐 garden goat phvtuber · art · live2d',
 }
 
-export default function Home() {
-  
+// const Home: NextPage = ({ images }: { images: ImageProps[] }) => {
+const Home: NextPage = () => {
   return (
     <main className="overflow-hidden relative h-full">
       <ArtPreview src="/mercy-art.jpg" alt="Overwatch Mercy Art" />
@@ -19,3 +19,5 @@ export default function Home() {
     </main>
   )
 }
+
+export default Home
