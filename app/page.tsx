@@ -6,7 +6,6 @@ export const metadata: Metadata = {
   description: '🐐 garden goat phvtuber · art · live2d',
 }
 
-// const Home: NextPage = ({ images }: { images: ImageProps[] }) => {
 const Home: NextPage = () => {
   return (
     <main className="overflow-hidden relative h-full">
