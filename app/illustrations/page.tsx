@@ -14,7 +14,7 @@ const Home: NextPage = async () => {
 
   return (
     <main className="relative h-full p-4">
-      <div className="flex flex-wrap gap-2 h-full absolute overflow-y-auto">
+      <div className="flex flex-wrap gap-2 h-[95%] absolute overflow-y-auto">
         {/* <span className="text-2xl pr-4 mr-4 border-e-[1px] border-zinc-400">🐐</span>
         <span>Illustrations</span> */}
         {images.map(({ id, public_id, format, height, width }) => (
