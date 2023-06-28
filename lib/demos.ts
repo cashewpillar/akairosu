@@ -26,7 +26,7 @@ export const demos: Item[] = [
     link: "/project-3",
   },
   {
-    name: "Illustrations",
+    name: "Illustrations (WIP)",
     slug: "illustrations",
     link: "/illustrations",
   },

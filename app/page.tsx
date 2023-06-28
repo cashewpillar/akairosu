@@ -1,4 +1,4 @@
-import { Metadata, NextPage } from 'next'
+import type { Metadata, NextPage } from 'next'
 import { ArtPreview } from '@/ui/art-preview'
 
 export const metadata: Metadata = {

@@ -118,7 +118,7 @@ function GlobalNavItem({
       onClick={close}
       href={`/${item.slug}`}
       className={clsx(
-        'block rounded-md px-3 py-1 text-sm font-medium hover:text-akairosu-brown transition-all duration-300',
+        'block rounded-md px-3 py-1 text-sm font-medium hover:text-akairosu-brown',
         {
           '': !isActive,
           'text-akairosu-brown font-semibold': isActive,
