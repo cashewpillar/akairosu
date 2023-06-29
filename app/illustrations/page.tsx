@@ -6,7 +6,7 @@ import Image from 'next/image'
 // import getBase64ImageUrl from '@/utils/generateBlurPlaceholder'
 
 export const metadata: Metadata = {
-  title: 'Overwatch Artworks',
+  title: 'Illustrations',
   description: ''
 }
 
