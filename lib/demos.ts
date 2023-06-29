@@ -21,17 +21,12 @@ export const demos: Item[] = [
     link: "/project-2",
   },
   {
-    name: "Overwatch (WIP)",
-    slug: "overwatch",
-    link: "/overwatch",
+    name: "Project 3",
+    slug: "project-3",
+    link: "/project-3",
   },
   {
-    name: "Original Characters (WIP)",
-    slug: "original-characters",
-    link: "/original-characters",
-  },
-  {
-    name: "Illustrations",
+    name: "Illustrations (WIP)",
     slug: "illustrations",
     link: "/illustrations",
   },
