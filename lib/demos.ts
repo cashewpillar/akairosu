@@ -26,6 +26,11 @@ export const demos: Item[] = [
     link: "/overwatch",
   },
   {
+    name: "Original Characters (WIP)",
+    slug: "original-characters",
+    link: "/original-characters",
+  },
+  {
     name: "Illustrations",
     slug: "illustrations",
     link: "/illustrations",
@@ -34,11 +39,6 @@ export const demos: Item[] = [
     name: "Animations",
     slug: "animations",
     link: "/animations",
-  },
-  {
-    name: "Social Links",
-    slug: "social-links",
-    link: "/social-links",
   },
   {
     name: "ETC.",
