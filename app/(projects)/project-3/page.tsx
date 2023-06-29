@@ -10,7 +10,7 @@ const Home: NextPage = () => {
     <main className="relative h-full grid place-content-center">
       <div>
         <span className="text-2xl pr-4 mr-4 border-e-[1px] border-zinc-400">🐐</span>
-        <span>Illustrations</span>
+        <span>Project 3</span>
       </div>
     </main>
   )
