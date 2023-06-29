@@ -17,12 +17,9 @@ const Home: NextPage = async () => {
   return (
     <main className="relative h-full p-4">
       <div className="flex flex-wrap gap-2 h-[95%] absolute overflow-y-auto">
-        {/* <span className="text-2xl pr-4 mr-4 border-e-[1px] border-zinc-400">🐐</span>
-        <span>Illustrations</span> */}
         {images.map(({ id, public_id, format, width, height, filename }) => {
           const aspect_ratio = width / height
           const crop_parameter = aspect_ratio > 1 ? `c_fit,w_${reduce(width)}` : `c_fit,h_${reduce(height)}`
-          console.log(filename)
           
           return (
           <div key={id}>
