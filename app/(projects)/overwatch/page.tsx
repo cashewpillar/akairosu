@@ -11,25 +11,33 @@ export const metadata: Metadata = {
 
 const Home: NextPage = async () => {
   const images: ImageProps[] = await getImages()
+  const cloud_name = process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME
+  const reduce = (num: number) => Math.round(num / 3)
 
   return (
     <main className="relative h-full p-4">
       <div className="flex flex-wrap gap-2 h-[95%] absolute overflow-y-auto">
         {/* <span className="text-2xl pr-4 mr-4 border-e-[1px] border-zinc-400">🐐</span>
         <span>Illustrations</span> */}
-        {images.map(({ id, public_id, format, height, width }) => (
+        {images.map(({ id, public_id, format, width, height, filename }) => {
+          const aspect_ratio = width / height
+          const crop_parameter = aspect_ratio > 1 ? `c_fit,w_${reduce(width)}` : `c_fit,h_${reduce(height)}`
+          console.log(filename)
+          
+          return (
           <div key={id}>
             <Image
               alt="Overwatch fanart by @akairosu_"
               className="rounded-lg"
               // placeholder="blur"
               // blurDataURL={blurDataUrl}
-              src={`https://res.cloudinary.com/${process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME}/image/upload/c_scale,w_720/${public_id}.${format}`}
-              width={width / 6}
-              height={height / 6}
+              src={`https://res.cloudinary.com/${cloud_name}/image/upload/${crop_parameter}/${public_id}.${format}`}
+              width={300*aspect_ratio}
+              height={300}
             />
           </div>
-          ))}
+          )
+        })}
       </div>
     </main>
   )
@@ -51,6 +59,7 @@ const getImages = async () => {
   for (let result of results.resources) {
     reducedResults.push({
       id: i,
+      filename: result.filename,
       height: result.height,
       width: result.width,
       public_id: result.public_id,
