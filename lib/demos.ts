@@ -36,9 +36,19 @@ export const demos: Item[] = [
     link: "/animations",
   },
   {
-    name: "ETC.",
-    slug: "etc",
-    link: "/etc",
+    name: "Live2D",
+    slug: "live2d",
+    link: "/live2d",
+  },
+  {
+    name: "Emotes",
+    slug: "emotes",
+    link: "/emotes",
+  },
+  {
+    name: "Coming Soon",
+    slug: "coming-soon",
+    link: "/coming-soon",
   }
 ]
 
