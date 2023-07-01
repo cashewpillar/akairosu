@@ -1,6 +1,4 @@
 @tailwind base;
-@tailwind components;
-@tailwind utilities;
 @import "nprogress/nprogress.css";
 
 #nprogress .spinner {
@@ -11,3 +9,26 @@
   background-color: theme('colors.akairosu.blue');
   height: 3px;
 }
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: theme('colors.akairosu.blue') transparent;
+}
+
+/* Chrome, Edge, and Safari */
+::-webkit-scrollbar {
+  height: 12px;
+  width: 8px;
+  scroll-behavior: smooth;
+  
+  /* background: transparent; */
+}
+
+::-webkit-scrollbar-thumb {
+  background: theme('colors.akairosu.blue');
+  /* -webkit-border-radius: 1ex; */
+}
+
+@tailwind components;
+@tailwind utilities;
