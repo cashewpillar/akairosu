@@ -31,6 +31,7 @@ export const Gallery = (
                     `c_fit,w_${reduce_dimension(width)}` : 
                     `c_fit,h_${reduce_dimension(height)}`
                 const url = `https://res.cloudinary.com/${cloud_name}/image/upload/${crop_parameter}/${public_id}.${format}`
+                const HQUrl = `https://res.cloudinary.com/${cloud_name}/image/upload/${public_id}.${format}`
                 
                 return (
                     <div key={id}>
@@ -42,7 +43,7 @@ export const Gallery = (
                             src={url}
                             width={300*aspect_ratio}
                             height={300}
-                            onClick={() => onArtworkClick(url)}
+                            onClick={() => onArtworkClick(HQUrl)}
                         />
                     </div>
                 )
