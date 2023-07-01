@@ -46,5 +46,3 @@ export const getImages = async (
   
     return reducedResults
   }
-
-  export const reduce_dimension = (num: number) => Math.round(num / 3)
