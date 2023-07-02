@@ -28,7 +28,9 @@ export const ArtPreview = (
     
     return (
         <div className="relative w-full h-full">
-            <ArtModal isOpen={isOpen} setIsOpen={setIsOpen} src={src} alt={alt} />
+            <ArtModal isOpen={isOpen} setIsOpen={setIsOpen}>
+                <Image src={src} alt={alt} className="object-contain" fill />
+            </ArtModal>
             <Image
                 src={src}
                 alt={alt}
