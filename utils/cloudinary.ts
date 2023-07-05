@@ -46,4 +46,31 @@ export const getImages = async (
     }
   
     return reducedResults
-  }
+}
+
+export const getImage = async (
+  folder: string
+) => {
+  const results = await cloudinary.v2.search
+    .expression(`folder:${folder}/*`)
+    .sort_by('created_at', 'desc')
+    .max_results(1)
+    .execute()
+  const result = results.resources[0]
+  const reducedResult: ImageProps = {
+      id: 0,
+      filename: result.filename,
+      height: result.height,
+      width: result.width,
+      public_id: result.public_id,
+      format: result.format,
+    }
+  const blurImagePromises = [getBase64ImageUrl(reducedResult),]
+  const imagesWithBlurDataUrls = await Promise.all(blurImagePromises)
+
+  reducedResult.blurDataUrl = imagesWithBlurDataUrls[0]
+
+  return reducedResult
+}
+
+export const cloud_name = process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME
