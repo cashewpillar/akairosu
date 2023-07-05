@@ -53,7 +53,7 @@ export const Gallery = (
                     <div className="overflow-hidden rounded-lg" key={id}>
                         <Image
                             alt={alt}
-                            className="hover:scale-110 transition-all rounded-lg cursor-zoom-in"
+                            className="hover:scale-110 transition-all ease-in rounded-lg cursor-zoom-in"
                             placeholder="blur"
                             blurDataURL={blurDataUrl}
                             src={url}
