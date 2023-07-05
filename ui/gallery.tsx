@@ -35,7 +35,7 @@ export const Gallery = (
                                 placeholder='blur'
                                 blurDataURL={blurDataUrl}
                                 alt={alt}
-                                className={`object-contain ${public_id === selectedImgId ? '' : 'hidden'}`}
+                                className={`object-scale-down ${public_id === selectedImgId ? '' : 'hidden'}`}
                                 fill
                             />
                         )
@@ -50,10 +50,10 @@ export const Gallery = (
                 const url = `https://res.cloudinary.com/${cloud_name}/image/upload/${crop_parameter}/${public_id}.${format}`
                 
                 return (
-                    <div key={id}>
+                    <div className="overflow-hidden rounded-lg" key={id}>
                         <Image
                             alt={alt}
-                            className="rounded-lg cursor-zoom-in"
+                            className="hover:scale-110 transition-all rounded-lg cursor-zoom-in"
                             placeholder="blur"
                             blurDataURL={blurDataUrl}
                             src={url}
