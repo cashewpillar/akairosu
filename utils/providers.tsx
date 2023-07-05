@@ -9,7 +9,7 @@ export function Providers({
     children: React.ReactNode
 }) {
   return (
-    <ThemeProvider attribute="class">
+    <ThemeProvider attribute="class" defaultTheme='light'>
       {children}
       <RouterEvents />
     </ThemeProvider>
