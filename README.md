@@ -1,4 +1,10 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<h1 align="center">akairosu_ 🌼garden goat🌿🐐</h1>
+
+☕ Portfolio site designed by [@akairosu_](https://twitter.com/akairosu_/) & developed by [@cashewpillar](https://github.com/cashewpillar)
+
+🌻 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+
+
 
 ## Getting Started
 
@@ -32,9 +38,3 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 1. Edit code
 2. Find code issues using `npm run lint`
 3. Stage changes, create commit, and push to remote repository
-
-## Use as Template
-
-1. Select `Use this template` 
-2. Set GitHub token 
-3. Once there is an update, a pull request will be made
