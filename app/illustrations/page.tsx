@@ -10,8 +10,8 @@ export const metadata: Metadata = {
 }
 
 const Home: NextPage = async () => {
-  const images: ImageProps[] = await getImages('overwatch')
-  const alt = 'Overwatch fanart by @akairosu_'
+  const images: ImageProps[] = await getImages('akairosu/illustrations')
+  const alt = 'Illustrations by @akairosu_'
 
   return (
     <main className="relative h-full p-4">
