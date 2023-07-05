@@ -26,12 +26,14 @@ export const Gallery = (
         <>
             <ArtModal isOpen={isOpen} setIsOpen={setIsOpen}>
                 <>
-                    {images.map(({ id, public_id, format }) => {
+                    {images.map(({ id, public_id, format, blurDataUrl }) => {
                         const HQUrl = `https://res.cloudinary.com/${cloud_name}/image/upload/${public_id}.${format}`
                         return (
                             <Image
                                 key={id}
                                 src={HQUrl}
+                                placeholder='blur'
+                                blurDataURL={blurDataUrl}
                                 alt={alt}
                                 className={`object-contain ${public_id === selectedImgId ? '' : 'hidden'}`}
                                 fill
@@ -40,7 +42,7 @@ export const Gallery = (
                     })}
                 </>
             </ArtModal>
-            {images.map(({ id, public_id, format, width, height, filename }) => {
+            {images.map(({ id, public_id, format, width, height, blurDataUrl }) => {
                 const aspect_ratio = width / height
                 const crop_parameter = aspect_ratio > 1 ? 
                     `c_fit,w_${reduce_dimension(width)}` : 
@@ -52,8 +54,8 @@ export const Gallery = (
                         <Image
                             alt={alt}
                             className="rounded-lg cursor-zoom-in"
-                            // placeholder="blur"
-                            // blurDataURL={blurDataUrl}
+                            placeholder="blur"
+                            blurDataURL={blurDataUrl}
                             src={url}
                             width={300*aspect_ratio}
                             height={300}
