@@ -1,13 +1,34 @@
 @tailwind base;
+@import "nprogress/nprogress.css";
+
+#nprogress .spinner {
+  display: none;
+}
+
+#nprogress .bar {
+  background-color: theme('colors.akairosu.blue');
+  height: 3px;
+}
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: theme('colors.akairosu.blue') transparent;
+}
+
+/* Chrome, Edge, and Safari */
+::-webkit-scrollbar {
+  height: 12px;
+  width: 8px;
+  scroll-behavior: smooth;
+  
+  /* background: transparent; */
+}
+
+::-webkit-scrollbar-thumb {
+  background: theme('colors.akairosu.blue');
+  /* -webkit-border-radius: 1ex; */
+}
+
 @tailwind components;
 @tailwind utilities;
-
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-rgb: 235, 233, 228;
-}
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background-color: rgb(var(--background-rgb));
-}

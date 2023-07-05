@@ -1,20 +1,22 @@
-import Image from 'next/image'
-import { Metadata } from 'next'
+import type { Metadata, NextPage } from 'next'
+import { ArtPreview } from '@/ui/art-preview'
 
 export const metadata: Metadata = {
-  title: 'Artist Name | Home',
-  description: 'Artist Name is a digital artist who likes drawing cute animals.',
+  title: 'akairosu_',
+  description: '🐐 garden goat phvtuber · art · live2d',
 }
 
-export default function Home() {
+const Home: NextPage = () => {
   return (
-    <div className="relative flex place-items-center">
-      <Image
-        src="/rabbit.png"
-        alt="Rabbit"
-        width={214}
-        height={300}
-      />
-    </div>
+    <main className="overflow-hidden relative h-full">
+      <ArtPreview src="/mercy-art.jpg" alt="Overwatch Mercy Art" />
+      {/* 
+        div element is for overlaying object-fitted art preview above 
+        so that it is unclickable where the screentones are present
+      */}
+      <div className="absolute top-0 left-[-12%] bg-none xl:w-8/12 lg:w-9/12 h-full skew-x-[167deg]"></div>
+    </main>
   )
 }
+
+export default Home
