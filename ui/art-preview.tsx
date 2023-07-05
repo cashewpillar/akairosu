@@ -39,9 +39,9 @@ export const ArtPreview = (
                 fill
             />
             <Image
-                src="/screentones.svg"
+                src="/screentone_fade_v4.svg"
                 alt="Overlay"
-                className="pointer-events-none transition-colors duration-300 invisible lg:visible object-cover object-left xl:object-[-100px] lg:object-[-300px]"
+                className="pointer-events-none transition-colors duration-300 invisible lg:visible object-cover object-left xl:object-[-120px] lg:object-[-300px]"
                 style={{
                     filter: (theme === 'light' ? filters.light : filters.dark),
                 }}
