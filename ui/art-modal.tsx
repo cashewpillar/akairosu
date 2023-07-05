@@ -1,15 +1,15 @@
-import { Fragment, useRef } from 'react'
+import React, { Fragment, useRef } from 'react'
 import { Dialog, Transition } from '@headlessui/react'
 import Image from 'next/image'
 
 export const ArtModal = ({ 
-    isOpen, setIsOpen, src, alt
+  children, isOpen, setIsOpen
 }: { 
-    isOpen: boolean,
-    setIsOpen: (isOpen: boolean) => void
-    src: string,
-    alt: string
-}) => {
+  children: React.ReactNode,
+  isOpen: boolean,
+  setIsOpen: (isOpen: boolean) => void
+}
+) => {
     
   const cancelButtonRef = useRef(null)
 
@@ -39,17 +39,12 @@ export const ArtModal = ({
               leaveFrom="opacity-100 translate-y-0 sm:scale-100"
               leaveTo="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
             >
-              <Dialog.Panel className="h-5/6 w-9/12 rounded-lg shadow-xl transition-all">
+              <Dialog.Panel className="h-5/6 w-9/12 rounded-lg pointer-events-none shadow-xl transition-all">
                 <div className="px-4 pb-4 pt-5 sm:p-6 sm:pb-4">
                   {/* <Dialog.Title as="h3" className="text-base font-semibold leading-6 text-gray-900">
                     {alt}
                   </Dialog.Title> */}
-                  <Image 
-                    src={src}
-                    alt={alt}
-                    className="object-cover object-center w-full h-full"
-                    fill
-                  />
+                  {children}
                 </div>
                 {/* Buttons */}
                 {/* <div className="bg-gray-50 px-4 py-3 sm:flex sm:flex-row-reverse sm:px-6">
