@@ -20,14 +20,19 @@ export const authOptions: NextAuthOptions = {
                   {
                       id: "1", 
                       email: process.env.ADMIN_EMAIL, 
-                      password: process.env.ADMIN_PASSWORD
+                      password: process.env.ADMIN_PASSWORD,
                   },
               ];
 
               const user = users.find(user => user.email === credentials?.email);
 
               if (user && user?.password === credentials?.password) {
-                  return {id: user.id, name: user.email, email: user.email, role: "admin"};
+                return {
+                    id: user.id, 
+                    name: user.email, 
+                    email: user.email, 
+                    role: "admin",
+                };
               } else {
                   return null;
               }
@@ -41,9 +46,9 @@ export const authOptions: NextAuthOptions = {
           // console.log('in jwt', {user, token, account, profile})
 
           if (user) {
-              token.user = user;
+              token.user = user
               const u = user as any
-              token.role = u.role;
+              token.role = u.role
           }
           if (account) {
               token.accessToken = account.access_token
