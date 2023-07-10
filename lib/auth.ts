@@ -2,7 +2,7 @@ import { NextAuthOptions } from "next-auth"
 import CredentialsProvider from "next-auth/providers/credentials"
 
 export const authOptions: NextAuthOptions = {
-  debug: true,
+  debug: false,
   session: {strategy: "jwt"},
   providers: [
       CredentialsProvider({

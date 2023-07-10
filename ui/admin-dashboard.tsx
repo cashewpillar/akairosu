@@ -5,6 +5,12 @@ import { useSession, signIn, signOut } from 'next-auth/react'
 
 export const AdminDashboard: NextPage = async () => {
   const { data: session } = useSession()
+  const redeploy = async () => {
+    const res = await fetch(
+      process.env.VERCEL_DEPLOY_HOOK!
+    )
+    console.log({res})
+  }
   
   return (
     <main className="relative h-full grid place-content-center">
@@ -36,8 +42,12 @@ export const AdminDashboard: NextPage = async () => {
               </thead>
               <tbody>
                 <tr>
-                  <td>Redeploy</td>
-                  <td>Use after making changes to project assets and info. Wait ~3 mins for updates to take effect</td>
+                  <td>
+                    <button onClick={() => redeploy()}>
+                      Redeploy
+                    </button>
+                  </td>
+                  <td>Use after making changes to project assets and info. Wait ~2 mins for updates to take effect</td>
                 </tr>
               </tbody>
             </table>
