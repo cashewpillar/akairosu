@@ -1,7 +1,11 @@
 'use client'
 
-import type { NextPage } from 'next'
+import type { NextPage, Metadata } from 'next'
 import { useSession, signIn, signOut } from 'next-auth/react'
+
+export const metadata: Metadata = {
+  title: 'Admin',
+}
 
 const Home: NextPage = async () => {
   const { data: session } = useSession()
