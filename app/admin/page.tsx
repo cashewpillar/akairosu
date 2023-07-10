@@ -11,12 +11,10 @@ const Home: NextPage = async () => {
       <main className="relative h-full grid place-content-center">
         <div>
           <span className="text-2xl pr-4 mr-4 border-e-[1px] border-zinc-400">🐐</span>
-          <span>You do not have permission to access this page.</span>
-          <div>
-            <button onClick={() => signIn()}>
-              Sign in
-            </button>
-          </div>
+          <span>Access denied. {' '}</span>
+          <button className="text-akairosu-orange hover:font-bold" onClick={() => signIn()}>
+            Sign in
+          </button>
         </div>
       </main>
     )
@@ -26,12 +24,10 @@ const Home: NextPage = async () => {
     <main className="relative h-full grid place-content-center">
       <div>
         <span className="text-2xl pr-4 mr-4 border-e-[1px] border-zinc-400">🐐</span>
-        <span>Admin</span>
-        <div>
-          <button onClick={() => signOut()}>
-            Sign out
-          </button>
-        </div>
+        <span>Admin. {' '}</span>
+        <button className="text-akairosu-orange hover:font-bold" onClick={() => signOut()}>
+          Sign out
+        </button>
       </div>
     </main>
   )
