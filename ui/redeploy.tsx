@@ -9,7 +9,7 @@ export const Redeploy = (
   }
   
   return (
-    <button className="text-akairosu-orange hover:font-bold" onClick={() => redeploy()}>
+    <button className="hover:font-bold" onClick={() => redeploy()}>
       Redeploy
     </button>
   )
