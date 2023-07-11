@@ -15,7 +15,7 @@ const Home: NextPage = async () => {
   const redeploy_hook = process.env.VERCEL_DEPLOY_HOOK!
   
   return (
-    <main className="relative h-full w-full">
+    <main className="h-full overflow-hidden">
       {!session? (
         <div className="h-full grid place-content-center">
           <div>
@@ -25,7 +25,7 @@ const Home: NextPage = async () => {
           </div>
         </div>
       ):(
-        <div className="px-4 py-8 flex flex-col m-8 space-y-8 h-[90%] bg-zinc-100 border-b-4 rounded-lg border-zinc-400/30 dark:bg-zinc-800/30 dark:border-zinc-700">
+        <div className="overflow-y-auto px-4 py-8 flex flex-col mt-8 lg:m-8 space-y-8 h-[90%] bg-zinc-100 border-b-4 rounded-lg border-zinc-400/30 dark:bg-zinc-800/30 dark:border-zinc-700">
           <table className="table-auto text-left">
             <thead className="text-akairosu-brown">
               <tr>
@@ -35,13 +35,13 @@ const Home: NextPage = async () => {
             </thead>
             <tbody>
               <tr>
-                <td>
+                <td className='align-top'>
                   <Redeploy redeployHook={redeploy_hook} />
                 </td>
                 <td>use after making changes to project assets & info, wait ~2 mins for updates to take effect.</td>
               </tr>
               <tr>
-                <td><SignOut /></td>
+                <td className='align-top'><SignOut /></td>
                 <td>sign out of the admin page after use, if on a public device</td>
               </tr>
             </tbody>
@@ -52,13 +52,15 @@ const Home: NextPage = async () => {
             <thead className='text-akairosu-brown'>
               <tr>
                 <th title="your portfolio's pages">Page</th>
+                <th title="text descriptions inside the page">Content</th>
                 <th title='helps search engines to index the website so they can show up top!'>Description</th>
               </tr>
             </thead>
             <tbody>
               {demos.map((item) => (
                 <tr key={item.slug}>
-                  <td>{ item.name }</td>
+                  <td className='align-top'>{ item.name }</td>
+                  <td>-</td>
                   <td>{ item.desc }</td>
                 </tr>
               ))}

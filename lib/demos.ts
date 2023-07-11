@@ -16,49 +16,49 @@ export const demos: Item[] = [
     name: "Project 1",
     slug: "project-1",
     link: "/project-1",
-    desc: ""
+    desc: "___ is my first project"
   },
   {
     name: "Project 2",
     slug: "project-2",
     link: "/project-2",
-    desc: ""
+    desc: "project 2"
   },
   {
     name: "Project 3",
     slug: "project-3",
     link: "/project-3",
-    desc: ""
+    desc: "project 3"
   },
   {
     name: "Illustrations (WIP)",
     slug: "illustrations",
     link: "/illustrations",
-    desc: ""
+    desc: "illustrations done using CSP!"
   },
   {
     name: "Animations",
     slug: "animations",
     link: "/animations",
-    desc: ""
+    desc: "animations"
   },
   {
     name: "Live2D",
     slug: "live2d",
     link: "/live2d",
-    desc: ""
+    desc: "live 2d models"
   },
   {
     name: "Emotes",
     slug: "emotes",
     link: "/emotes",
-    desc: ""
+    desc: "emotes"
   },
   {
     name: "Coming Soon",
     slug: "coming-soon",
     link: "/coming-soon",
-    desc: ""
+    desc: "i'm working on ___ !!"
   }
 ]
 
