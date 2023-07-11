@@ -24,15 +24,9 @@ const Home: NextPage = async () => {
           </div>
         </div>
       ):(
-        <div className="m-8 h-[90%] bg-zinc-100 border-b-4 rounded-lg dark:rounded-none dark:border-b-2 border-zinc-400/30 dark:bg-transparent dark:border-akairosu-white">
+        <div className="px-4 py-8 flex flex-col m-8 space-y-8 h-[90%] bg-zinc-100 border-b-4 rounded-lg border-zinc-400/30 dark:bg-zinc-800/30 dark:border-zinc-700">
           <table className="table-auto text-left">
             <thead>
-              <tr>
-                <th>Admin</th>
-                <th>
-                  <SignOut />
-                </th>
-              </tr>
               <tr>
                 <th>Action</th>
                 <th>Function</th>
@@ -43,18 +37,22 @@ const Home: NextPage = async () => {
                 <td>
                   <Redeploy redeployHook={redeploy_hook} />
                 </td>
-                <td>Use after making changes to project assets and info. Wait ~2 mins for updates to take effect.</td>
+                <td>use after making changes to project assets & info, wait ~2 mins for updates to take effect.</td>
+              </tr>
+              <tr>
+                <td><SignOut /></td>
+                <td>sign out of the admin page after use, if on a public device</td>
               </tr>
             </tbody>
           </table>
 
-          <h3>Update Texts</h3>
-          <table className="table-auto">
+          <table className="table-auto text-left">
+            <caption className='caption-bottom text-xs text-zinc-400 dark:text-zinc-500 text-left'>Quick tip: hover over the header texts to learn what each column means!</caption>
             <thead>
               <tr>
-                <th>Page</th>
-                <th>Title</th>
-                <th>Description</th>
+                <th title="your portfolio's pages">Page</th>
+                <th title='name of the tab'>Title</th>
+                <th title='helps search engines to index the website so they can show up top!'>Description</th>
               </tr>
             </thead>
             <tbody>
