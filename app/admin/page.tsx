@@ -43,7 +43,7 @@ const Home: NextPage = async () => {
                 <td>
                   <Redeploy redeployHook={redeploy_hook} />
                 </td>
-                <td>Use after making changes to project assets and info. Wait ~2 mins for updates to take effect</td>
+                <td>Use after making changes to project assets and info. Wait ~2 mins for updates to take effect.</td>
               </tr>
             </tbody>
           </table>
