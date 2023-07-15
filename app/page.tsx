@@ -2,10 +2,11 @@ import type { Metadata, NextPage } from 'next'
 import type { ImageProps } from '@/utils/types'
 import { ArtPreview } from '@/ui/art-preview'
 import { getImage } from '@/utils/cloudinary'
+import { getMetadataDescription } from '@/utils/getMetadata'
 
 export const metadata: Metadata = {
   title: 'akairosu_',
-  description: '🐐 garden goat phvtuber · art · live2d',
+  description: getMetadataDescription(''),
 }
 
 const Home: NextPage = async () => {

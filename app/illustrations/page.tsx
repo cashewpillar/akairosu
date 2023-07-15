@@ -2,11 +2,14 @@ import type { Metadata, NextPage } from 'next'
 import type { ImageProps } from '@/utils/types'
 import { getImages } from '@/utils/cloudinary'
 import { Gallery } from '@/ui/gallery'
-// import getBase64ImageUrl from '@/utils/generateBlurPlaceholder'
+import { 
+  getMetadataDescription,
+  getMetadataTitle
+} from '@/utils/getMetadata'
 
 export const metadata: Metadata = {
-  title: 'Illustrations',
-  description: ''
+  title: getMetadataTitle('illustrations'),
+  description: getMetadataDescription('illustrations'),
 }
 
 const Home: NextPage = async () => {

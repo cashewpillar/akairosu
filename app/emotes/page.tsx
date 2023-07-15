@@ -1,8 +1,12 @@
 import type { Metadata, NextPage } from 'next'
+import { 
+  getMetadataDescription,
+  getMetadataTitle
+} from '@/utils/getMetadata'
 
 export const metadata: Metadata = {
-  title: 'Emotes',
-  description: '',
+  title: getMetadataTitle('emotes'),
+  description: getMetadataDescription('emotes'),
 }
 
 const Home: NextPage = () => {
