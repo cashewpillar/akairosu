@@ -5,6 +5,7 @@ import { Redeploy } from '@/ui/redeploy'
 import { SignIn } from '@/ui/sign-in'
 import { SignOut } from '@/ui/sign-out'
 import { demos } from '@/lib/demos'
+import { EditableText } from '@/ui/editable-text'
 
 export const metadata: Metadata = {
   title: 'Admin',
@@ -42,7 +43,7 @@ const Home: NextPage = async () => {
               </tr>
               <tr>
                 <td className='align-top'><SignOut /></td>
-                <td>sign out of the admin page after use, if on a public device</td>
+                <td>sign out of the admin page after use, if on a public device.</td>
               </tr>
             </tbody>
           </table>
@@ -61,7 +62,7 @@ const Home: NextPage = async () => {
                 <tr key={item.slug}>
                   <td className='align-top'>{ item.name }</td>
                   <td>-</td>
-                  <td>{ item.desc }</td>
+                  <td> <EditableText text={item.desc} /> </td>
                 </tr>
               ))}
             </tbody>
