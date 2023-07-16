@@ -49,7 +49,7 @@ const Home: NextPage = async () => {
           </table>
 
           <table className="table-auto text-left">
-            <caption className='caption-bottom text-xs text-zinc-400 dark:text-zinc-500 text-left'>Quick tip: hover over the header texts to learn what each column means!</caption>
+            <caption className='caption-bottom text-xs text-zinc-400 dark:text-zinc-500 text-left'>Note: table above is just for example and won&apos;t do anything with the website.</caption>
             <thead className='text-akairosu-brown'>
               <tr>
                 <th title="your portfolio's pages">Page</th>

@@ -26,7 +26,7 @@ export const Redeploy = (
   )
   
   const redeploy = async () => {
-    // const res = await fetch(redeployHook)
+    const res = await fetch(redeployHook)
     setIsRedeploying(true)
     let interval = setInterval(() => {
       timeLeft.current -= 1
@@ -37,7 +37,7 @@ export const Redeploy = (
       clearInterval(interval)
       timeLeft.current = redeployTime
     }, redeployTime * 1000)
-    // return res.json()
+    return res.json()
   }
   
   
