@@ -25,6 +25,7 @@ export const ArtPreview = (
     }
     const cloud_name = process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME
     const url = `https://res.cloudinary.com/${cloud_name}/image/upload/${bgImage.public_id}.${bgImage.format}`
+    const [imageLoaded, setImageLoaded] = useState(false)
 
     useEffect(() => setMounted(true), [])
     if (!mounted) return null
@@ -41,33 +42,38 @@ export const ArtPreview = (
                     fill 
                 />
             </ArtModal>
-            <Image
-                placeholder='blur' 
-                blurDataURL={bgImage.blurDataUrl}
-                src={url}
-                alt={alt}
-                className="cursor-zoom-in object-cover xl:object-[200px] lg:object-[10px] w-full h-full"
-                onClick={() => setIsOpen(true)}
-                fill
-            />
+            {imageLoaded && (
+                <Image
+                    placeholder='blur' 
+                    blurDataURL={bgImage.blurDataUrl}
+                    src={url}
+                    alt={alt}
+                    className="cursor-zoom-in object-cover xl:object-[200px] lg:object-[10px] w-full h-full"
+                    onClick={() => setIsOpen(true)}
+                    fill
+                />
+            )}
             <Image
                 src="/screentone_fade_v4.svg"
                 alt="Overlay"
                 className="pointer-events-none transition-colors duration-300 invisible lg:visible object-cover object-left xl:object-[-120px] lg:object-[-300px]"
+                onLoadingComplete={() => setImageLoaded(true)}
                 style={{
                     filter: (theme === 'light' ? filters.light : filters.dark),
                 }}
                 fill
-                />
-            <Image
-                src="/diamonds.svg"
-                alt="Diamond Overlay"
-                className="pointer-events-none transition-colors duration-300 invisible xl:visible object-contain object-right-bottom"
-                style={{
-                    filter: (theme === 'light' ? filters.gray : filters.orange),
-                }}
-                fill
             />
+            {imageLoaded && (
+                <Image
+                    src="/diamonds.svg"
+                    alt="Diamond Overlay"
+                    className="pointer-events-none transition-colors duration-300 invisible xl:visible object-contain object-right-bottom"
+                    style={{
+                        filter: (theme === 'light' ? filters.gray : filters.orange),
+                    }}
+                    fill
+                />
+            )}
         </div>
     )
 }
