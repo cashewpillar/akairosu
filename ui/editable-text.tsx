@@ -17,6 +17,7 @@ export const EditableText = (
           value={currentText}
           onChange={e => setCurrentText(e.target.value)}
           onBlur={() => setIsEditing(false)}
+          onKeyDown={e => setIsEditing(e.key !== 'Enter')}
           autoFocus
         />
       ):(
