@@ -39,8 +39,8 @@ export const ArtModal = ({
               leaveFrom="opacity-100 translate-y-0 sm:scale-100"
               leaveTo="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
             >
-              <Dialog.Panel className="h-5/6 w-9/12 rounded-lg pointer-events-none shadow-xl transition-all">
-                <div className="px-4 pb-4 pt-5 sm:p-6 sm:pb-4">
+              <Dialog.Panel className="pointer-events-none h-min m-4 rounded-lg shadow-xl transition-all">
+                <div>
                   {/* <Dialog.Title as="h3" className="text-base font-semibold leading-6 text-gray-900">
                     {alt}
                   </Dialog.Title> */}
