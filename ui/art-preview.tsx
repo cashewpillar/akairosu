@@ -26,6 +26,8 @@ export const ArtPreview = (
     const cloud_name = process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME
     const url = `https://res.cloudinary.com/${cloud_name}/image/upload/${bgImage.public_id}.${bgImage.format}`
     const [imageLoaded, setImageLoaded] = useState(false)
+    const screen_height = typeof window !== 'undefined' ? window.innerHeight * 0.95 : 0 // 95% of screen height for spacing
+    const bg_aspect_ratio = bgImage.width / bgImage.height
 
     useEffect(() => setMounted(true), [])
     if (!mounted) return null
@@ -38,8 +40,9 @@ export const ArtPreview = (
                     blurDataURL={bgImage.blurDataUrl} 
                     src={url} 
                     alt={alt} 
-                    className="object-contain" 
-                    fill 
+                    className="rounded-lg" 
+                    width={screen_height*bg_aspect_ratio}
+                    height={screen_height}
                 />
             </ArtModal>
             {imageLoaded && (
