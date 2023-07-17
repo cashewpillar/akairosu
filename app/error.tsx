@@ -15,11 +15,12 @@ export default function Error({
   }, [error]);
 
   return (
-    <main className="flex flex-col place-content-center h-full p-4">
-      <div className="grid place-content-center gap-4">
-        <div className="text-xl">Something went wrong!</div>
+    <main className="relative h-full grid place-content-center">
+      <div>
+        <span className="text-2xl pr-4 mr-4 border-e-[1px] border-zinc-400">🐐</span>
+        <span className="mr-4">something went wraung!</span>
         <button
-          className="transition-colors bg-transparent hover:bg-akairosu-brown text-zinc-900 dark:text-akairosu-white font-semibold hover:text-akairosu-white py-2 px-4 border border-zinc-900 dark:border-akairosu-white dark:hover:border-none rounded"
+          className="w-24 text-sm transition-all rounded-full bg-akairosu-blue hover:bg-akairosu-brown text-akairosu-white"
           onClick={
             // Attempt to recover by trying to re-render the segment
             () => reset()
@@ -29,5 +30,5 @@ export default function Error({
         </button>
       </div>
     </main>
-  );
+  )
 }
