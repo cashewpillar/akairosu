@@ -25,7 +25,6 @@ export const ArtPreview = (
     }
     const cloud_name = process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME
     const url = `https://res.cloudinary.com/${cloud_name}/image/upload/${bgImage.public_id}.${bgImage.format}`
-    const [imageLoaded, setImageLoaded] = useState(false)
     const screen_height = typeof window !== 'undefined' ? window.innerHeight * 0.95 : 0 // 95% of screen height for spacing
     const bg_aspect_ratio = bgImage.width / bgImage.height
 
@@ -45,38 +44,34 @@ export const ArtPreview = (
                     height={screen_height}
                 />
             </ArtModal>
-            {imageLoaded && (
-                <Image
-                    placeholder='blur' 
-                    blurDataURL={bgImage.blurDataUrl}
-                    src={url}
-                    alt={alt}
-                    className="cursor-zoom-in object-cover xl:object-[200px] lg:object-[10px] w-full h-full"
-                    onClick={() => setIsOpen(true)}
-                    fill
-                />
-            )}
             <Image
-                src="/screentone_fade_v4.svg"
+            placeholder='blur' 
+                blurDataURL={bgImage.blurDataUrl}
+                src={url}
+                alt={alt}
+                className="cursor-zoom-in object-cover xl:object-[200px] lg:object-[10px] w-full h-full"
+                onClick={() => setIsOpen(true)}
+                fill
+            />
+            {/* <Image
+                src="/screentone_fade.svg"
                 alt="Overlay"
-                className="pointer-events-none transition-colors duration-300 invisible lg:visible object-cover object-left xl:object-[-120px] lg:object-[-300px]"
-                onLoadingComplete={() => setImageLoaded(true)}
+                className="gradient-mask pointer-events-none transition-colors duration-300 invisible lg:visible object-cover object-left"
                 style={{
                     filter: (theme === 'light' ? filters.light : filters.dark),
                 }}
                 fill
+            /> */}
+            <div className="skew-x-[167deg] lg:visible invisible pointer-events-none bg-gradient-to-r from-white dark:from-zinc-900 from-50% absolute top-0 left-[-12%] w-full h-full"></div>
+            <Image
+            src="/diamonds.svg"
+            alt="Diamond Overlay"
+            className="pointer-events-none transition-colors duration-300 invisible xl:visible object-contain object-right-bottom"
+            style={{
+                    filter: (theme === 'light' ? filters.gray : filters.orange),
+                }}
+                fill
             />
-            {imageLoaded && (
-                <Image
-                    src="/diamonds.svg"
-                    alt="Diamond Overlay"
-                    className="pointer-events-none transition-colors duration-300 invisible xl:visible object-contain object-right-bottom"
-                    style={{
-                        filter: (theme === 'light' ? filters.gray : filters.orange),
-                    }}
-                    fill
-                />
-            )}
         </div>
     )
 }
