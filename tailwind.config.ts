@@ -30,5 +30,5 @@ export default {
     },
   },
   darkMode: 'class',
-  plugins: [require("tailwind-gradient-mask-image")],
+  plugins: [],
 } satisfies Config;
