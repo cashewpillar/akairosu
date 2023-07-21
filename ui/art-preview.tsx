@@ -49,7 +49,7 @@ export const ArtPreview = (
                 blurDataURL={bgImage.blurDataUrl}
                 src={url}
                 alt={alt}
-                className="lg:brightness-100 dark:brightness-[40%] brightness-50 cursor-zoom-in object-cover xl:object-[200px] lg:object-[10px] w-full h-full"
+                className="lg:brightness-100 dark:lg:brightness-100 dark:brightness-[40%] brightness-50 cursor-zoom-in object-cover xl:object-[200px] lg:object-[10px] w-full h-full"
                 onClick={() => setIsOpen(true)}
                 fill
             />
