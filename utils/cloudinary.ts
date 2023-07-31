@@ -18,7 +18,7 @@ export const getImages = async (
     
     const results = await cloudinary.v2.search
       .expression(`folder:${folder}/*`)
-      .sort_by('public_id', 'desc')
+      .sort_by('width', 'asc')
       .max_results(400)
       .execute()
     let reducedResults: ImageProps[] = []
@@ -33,6 +33,7 @@ export const getImages = async (
         public_id: result.public_id,
         format: result.format,
       })
+      console.log(`${result.width / result.height} > ${result.width / result.height*300}`)
       i++
     }
   
